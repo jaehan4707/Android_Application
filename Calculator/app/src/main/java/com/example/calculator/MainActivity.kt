@@ -1,10 +1,14 @@
 package com.example.calculator
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageButton
 import android.widget.TextView
 import android.widget.Toast
+import androidx.room.Room
+import kotlinx.android.synthetic.main.activity_main.*
 import java.lang.ArithmeticException
 import java.math.BigDecimal
 import java.math.RoundingMode
@@ -13,6 +17,7 @@ class MainActivity : AppCompatActivity() {
     enum class Opkind {
         Plus, Minus, Times, Divide
     }
+
 
     companion object {
         fun Opkind.compute(a: BigDecimal, b: BigDecimal) = when (this) {
@@ -28,10 +33,18 @@ class MainActivity : AppCompatActivity() {
     private var lastResult: BigDecimal = BigDecimal.ZERO;
     private var lastOp: Opkind? = null
     private var waitingNextOperand: Boolean = false
-
+    //lateinit var db:AppDatabase
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        /*
+        db= Room.databaseBuilder(
+            applicationContext,
+            AppDatabase::class.java,
+            "historyDB"
+        ).build()
+
+         */
 
         findViewById<Button>(R.id.num_0_button).setOnClickListener { appendText("0") }
         findViewById<Button>(R.id.num_1_button).setOnClickListener { appendText("1") }
@@ -47,10 +60,9 @@ class MainActivity : AppCompatActivity() {
         findViewById<Button>(R.id.dot_button).setOnClickListener { appendText(".") }
         findViewById<Button>(R.id.result_clear).setOnClickListener { resultClear() }
         findViewById<Button>(R.id.left_right_button).setOnClickListener { appendText(")") }
-        findViewById<Button>(R.id.del_button).setOnClickListener {
-            val currentText = txtInput.text.toString()
-            val newText = currentText.substring(0, currentText.length - 1)
-            txtInput.text = if (newText.isEmpty() || newText == "-") "0" else newText
+        findViewById<ImageButton>(R.id.history_button).setOnClickListener {
+            val intent = Intent(this, sub::class.java)
+            startActivity(intent)
         }
         findViewById<Button>(R.id.clear_button).setOnClickListener { clearText() }
         findViewById<Button>(R.id.plus_button).setOnClickListener { calc(Opkind.Plus) }
@@ -65,8 +77,16 @@ class MainActivity : AppCompatActivity() {
     private fun clearText() {
         txtInput.text = "0"
     }
+
     private fun resultClear(){
-        txtResult.text="0"
+      txtResult.text="0"
+        /*
+        val expressionText=input_text.toString()
+        val resultText=txtResult.text.toString()
+        Thread(Runnable {
+            db.historyDao().insertHistory(History(null,expressionText,resultText))
+        }).start()
+         */
     }
     private fun appendText(text: String) {
         if (waitingNextOperand) {
