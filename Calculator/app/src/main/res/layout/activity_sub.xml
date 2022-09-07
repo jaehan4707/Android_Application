@@ -15,6 +15,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <!-- 계산 기록 불러오기 버튼 -->
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/record_Button"
         android:layout_width="0dp"
@@ -22,26 +23,29 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="250dp"
         android:layout_marginBottom="16dp"
-        android:background="@null"
-        android:gravity="center_horizontal|left|center_vertical"
+        android:background="@drawable/button_background"
+        android:gravity="center"
         android:stateListAnimator="@null"
         android:text="계산기록                             불러오기"
-        android:textColor="@color/black"
+        android:textColor="@color/green"
         android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/scrollView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!-- 닫기 버튼 -->
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/closeButton"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="@null"
+        android:background="@drawable/button_background"
         android:stateListAnimator="@null"
         android:text="닫기"
-        android:textColor="@color/black"
+        android:textColor="@color/green"
         android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -52,7 +56,7 @@
         android:layout_margin="10dp"
         app:layout_constraintBottom_toTopOf="@id/historyClearButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.157"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/closeButton"
         app:layout_constraintVertical_bias="1.0">
@@ -68,13 +72,14 @@
             android:orientation="vertical" />
 
     </ScrollView>
+
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/historyClearButton"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="47dp"
         android:layout_marginEnd="47dp"
-        android:layout_marginBottom="38dp"
+        android:layout_marginBottom="36dp"
         android:background="@drawable/button_background_green"
         android:stateListAnimator="@null"
         android:text="계산 기록 삭제"
@@ -82,6 +87,7 @@
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
 
