@@ -5,7 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a1a3fe4-407c-4a23-8e9a-8e99dec6cf05" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Calculator/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Calculator/app/src/main/java/com/example/calculator/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator/app/src/main/java/com/example/calculator/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Calculator/app/src/main/java/com/example/calculator/sub.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator/app/src/main/java/com/example/calculator/sub.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Calculator/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Calculator/app/src/main/res/layout/activity_sub.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator/app/src/main/res/layout/activity_sub.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +30,7 @@
     <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
     <property name="android.sdk.path" value="$PROJECT_DIR$/../../../../Public/Downloads" />
     <property name="cidr.known.project.marker" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Calculator" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -48,5 +53,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

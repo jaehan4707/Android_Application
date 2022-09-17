@@ -10,20 +10,19 @@ import com.example.calculator.model.History
 // entitiy 조회등 어떻게 할건지
 @Dao
 interface HistoryDao {
-
-    @Query("SELECT * FROM history_table") // 쿼리문 작성
+    @Query("SELECT *FROM history")
     fun getAll(): List<History>
 
     @Insert
     fun insertHistory(history: History)
 
-    @Query("DELETE FROM history_table") // 테이블 전체 삭제
+    @Query("DELETE FROM history")
     fun deleteAll()
+//
+//    @Delete
+//    fun delete(history: History)
+//
+//    @Query("SELECT * FROM history WHERE result LIKE :result LIMIT 1")
+//    fun findByResult(result :String) :List<History>
 
-    @Delete // 해당 히스트로리만 제거
-    fun delete(history: History)
-
-    // 조건 가진 결과만 가져오기 (1개만)
-    @Query("SELECT * FROM history_table WHERE result LIKE :result LIMIT 1")
-    fun findByResult(result: String): History
 }
